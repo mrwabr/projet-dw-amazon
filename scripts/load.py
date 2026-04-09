@@ -7,15 +7,14 @@ from extract import write_watermark   # ✅ watermark déplacé ici
 def get_conn():
     return pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=amazon--server.database.windows.net;"
-        "DATABASE=amazone_dw;"
-        "UID=CloudSA456cceb9;"
-        "PWD=Leilaamazonserver04;"
+        "SERVER=monamazon--server.database.windows.net;"
+        "DATABASE=amazones_dw;"
+        "UID=ServerSA456cceb9;"
+        "PWD=almy1234@;"
         "Encrypt=yes;"
         "TrustServerCertificate=no;"
         "Connection Timeout=30;"
     )
-
 
 def insert_df(cursor, df, table_name, pk_col):
     """
